@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif
+}
+
+::selection {
+    background-color: white;
+    color: #95C11E;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.nav img {
+    width: 80px;
+}
+
+.nav {
+    height: 130px;
+    width: 100%;
+    /* background-color: rgb(87, 51, 145); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: fixed;
+    z-index: 30;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 15px;
+    align-items: start;
+    cursor: pointer;
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 3;
+    transition: scale ease .2s;
+}
+
+.blurCursor {
+    height: 200px;
+    width: 200px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+}
+
+.main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.page1 h1 {
+    font-size: 94px;
+    word-spacing: -5px;
+    position: relative;
+}
+
+.page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1px #b8ed28;
+    z-index: -1;
+}
+
+.page1 h2 {
+    font-size: 30px;
+    margin: 20px 0px;
+}
+
+.page1 p {
+    width: 35%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.page2 {
+    width: 100%;
+    z-index: 10;
+}
+
+.marquee span {
+    font-size: 100px;
+    font-weight: 600;
+    font-family: serif;
+    padding-left: 50px;
+    -webkit-text-stroke: 2px #95C11E;
+    color: transparent;
+    text-transform: uppercase;
+}
+.marquee span:hover{
+    color: #95C11E;
+}
+.aboutUs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.aboutUs img {
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.aboutUs .about {
+    width: 40%;
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.cards img {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    transition: all ease .4s;
+}
+
+.upper {
+    background-color: #95C11E;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    opacity: 0;
+    position: absolute;
+    transition: all ease-in .2s;
+    padding-top: 70px;
+}
+
+.card:hover .upper{
+    opacity: 1;
+}
+.card:hover {
+    transform: rotate3d(-1,1,1,20deg);
+}
+.greenDiv{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    background: linear-gradient(45deg,#95C11E , rgb(38, 145, 11));
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+.greenDiv h3{
+    font-size: 25px;
+    line-height: 40px;
+}
+.greenDiv img{
+    height:100%;
+    width: 400px;
+    scale: 3;
+}
+.page3{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.page3 h3{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    width: 55%;
+}
+.page3 img{
+    width: 80px;
+    position: absolute;
+}
+#colon1{
+    top: 180px;
+    left: 180px;
+}
+#colon2{
+    bottom: 180px;
+    right: 230px;
+}
+.page4{
+   min-height: 45vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.lastDiv{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+.last{
+    width: 28%;
+    height: 53%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease .4s;
+}
+.last:hover h1{
+    background-color: transparent;
+}
+.last img{
+    height: 100%;
+    width: 100%;
+}
+.last h1{
+    position: absolute;
+    transition: all ease .6s;
+    background-color: #95C11E;
+    height: 100%;
+    width: 100%;
+    font-size: 33px;
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    color: black;
+}
+.last h1:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+#h1Big{
+    position: absolute;
+    font-size: 82px;
+    -webkit-text-stroke: 1px white;
+    top: 0;
+    color: transparent;
+}
+.footer #logo{
+    width: 120px;
+}
+.footer{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg,#95C11E , rgb(38, 145, 11));
+}
+.footer .address{
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+}
+.footer h3{
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.footer #back{
+    width: 20%;
+    position: absolute;
+    scale: 1.5;
+    left: 0;
+}
